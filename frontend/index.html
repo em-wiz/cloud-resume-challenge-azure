@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Emmanuel - Cloud Engineer | Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800/50 transition-colors duration-300">
+        <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-lg font-semibold tracking-tight">WE</a>
+            <div class="flex items-center gap-4 md:gap-6">
+                <!-- Desktop nav links (hidden on mobile) -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#experience" class="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Experience</a>
+                    <a href="#projects" class="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Projects</a>
+                    <a href="#skills" class="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Skills</a>
+                </div>
+                <div class="flex items-center gap-3 md:gap-4 md:ml-4 md:pl-4 md:border-l border-slate-200 dark:border-slate-800">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
+                        <!-- Sun icon (shown in dark mode) -->
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+                        <!-- Moon icon (shown in light mode) -->
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 006.002-2.248z"/></svg>
+                    </button>
+                    <a href="https://github.com/em-wiz" target="_blank" rel="noopener" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" aria-label="GitHub">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wisdom96" target="_blank" rel="noopener" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" aria-label="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <!-- Mobile hamburger menu button -->
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle menu" aria-expanded="false">
+                        <!-- Hamburger icon -->
+                        <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                        <!-- Close icon (hidden by default) -->
+                        <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
+                <a href="#experience" class="mobile-nav-link text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors py-2">Experience</a>
+                <a href="#projects" class="mobile-nav-link text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors py-2">Projects</a>
+                <a href="#skills" class="mobile-nav-link text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors py-2">Skills</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6">
+        
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center pt-20">
+            <div class="space-y-6">
+                <!-- <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Available for opportunities
+                </div> -->
+                <div class="flex items-center gap-5 md:gap-6">
+                    <div class="relative shrink-0">
+                        <img src="profile.png" alt="John Doe" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover ring-4 ring-slate-100 dark:ring-slate-800" />
+                        <div class="absolute -bottom-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-emerald-500 rounded-full border-2 border-slate-50 dark:border-slate-950"></div>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-tight text-slate-900 dark:text-slate-100">
+                        Wisdom Emmanuel
+                    </h1>
+                </div>
+                
+                <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-light max-w-2xl leading-relaxed">
+                    Cloud Engineer
+                </p>
+                <p class="text-lg text-slate-600 dark:text-slate-500 max-w-2xl leading-relaxed">
+                    I design and build cloud-native solutions on Azure, driven by real-world problems and a focus on reliability, scalability, and automation.
+                </p>
+                <div class="flex items-center gap-4 pt-4">
+                    <a href="mailto:emmanuelwisdom95@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-950 rounded-full text-sm font-medium hover:bg-slate-800 dark:hover:bg-white transition-colors">
+                        Get in touch
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium hover:border-slate-400 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        View projects
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-32">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Experience</h2>
+                <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+            </div>
+            
+            <div class="relative pl-8 border-l border-slate-200 dark:border-slate-800 space-y-12">
+                <!-- Experience Item 1 -->
+                <div class="relative timeline-dot">
+                    <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-3">
+                        <h3 class="text-xl font-medium text-slate-900 dark:text-slate-100">UI Developer (UX & Solutions Focus)</h3>
+                        <span class="text-slate-400 dark:text-slate-500 hidden md:inline">•</span>
+                        <span class="text-slate-500 dark:text-slate-400">Reliance Infosystems.</span>
+                    </div>
+                    <p class="text-sm text-slate-400 dark:text-slate-500 mb-4">Jan 2022 — Present</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+                        Delivered end-to-end UI/UX solutions for enterprise applications while supporting cloud-hosted systems on Microsoft Azure. Participated in deployment validation, production troubleshooting, and ticket-based support to ensure stable releases and reliable user experiences.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Azure</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Cloud Ops</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Git</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Figma</span>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative timeline-dot">
+                    <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-3">
+                        <h3 class="text-xl font-medium text-slate-900 dark:text-slate-100">Solutions Developer (Systems & Application Support)</h3>
+                        <span class="text-slate-400 dark:text-slate-500 hidden md:inline">•</span>
+                        <span class="text-slate-500 dark:text-slate-400">Reliance Infosystems.</span>
+                    </div>
+                    <p class="text-sm text-slate-400 dark:text-slate-500 mb-4">Jun 2021 — Jul 2023</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+                        Supported enterprise ERP systems across local, test, and live environments, handling deployments, application support, and operational troubleshooting. Executed existing CI/CD pipeline builds, reviewed logs to identify failures, escalated issues with clear technical context, and provided end-user support through structured ticket workflows while maintaining documentation and contributing to UI development using HTML, CSS, and JavaScript.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Azure DevOps</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">ERP Support</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Log Analysis</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Git</span>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="relative timeline-dot">
+                    <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-3">
+                        <h3 class="text-xl font-medium text-slate-900 dark:text-slate-100">AWS Cloud Computing Fellow</h3>
+                        <span class="text-slate-400 dark:text-slate-500 hidden md:inline">•</span>
+                        <span class="text-slate-500 dark:text-slate-400">ALX Africa.</span>
+                    </div>
+                    <p class="text-sm text-slate-400 dark:text-slate-500 mb-4">Jun 2023 — Oct 2023</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+                        Earned the AWS Certified Cloud Practitioner certification through an intensive fellowship, gaining hands-on experience of the AWS Management Console to deploy scalable infrastructure like EC2 and S3. Developed a strong foundation in cloud security by implementing IAM best practices and the principle of least privilege, while specialized labs provided deep dives into cloud economics, cost optimization, and global architecture.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">AWS</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">EC2</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">Amazon S3</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">IAM</span>
+                        <span class="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800">VPC</span>
+                                                
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-32">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Projects</h2>
+                <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-0 gap-6">
+                <!-- Project 1 - Active with gradient border -->
+                <div class="gradient-border">
+                    <div class="gradient-border-inner p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <svg class="w-6 h-6 text-sky-500 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
+                                Active
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-slate-900 dark:text-slate-100">Cloud Resume Challenge</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                            Serverless resume website hosted on Azure Storage Static Website with an Azure Functions API and Cosmos DB (serverless) backend. Includes a visitor counter and GitHub Actions CI/CD pipeline.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-0.5 text-xs rounded bg-blue-500/10 text-blue-600 dark:text-blue-400">Azure</span>
+                            <span class="px-2 py-0.5 text-xs rounded bg-yellow-500/10 text-yellow-600 dark:text-yellow-400">JavaScript</span>
+                            <span class="px-2 py-0.5 text-xs rounded bg-purple-500/10 text-purple-600 dark:text-purple-400">Terraform</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                            View project
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Certifications Bento Grid -->
+        <section id="skills" class="py-32">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Skills & Certifications</h2>
+                <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-4">
+                <!-- AWS Services -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 md:col-span-2 row-span-1 order-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2 rounded-lg bg-orange-500/10">
+                            <svg class="w-5 h-5 text-orange-400" viewBox="0 0 24 24" fill="currentColor"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.296.072-.583.16-.863.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.28-.144.614-.263 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.415-.287-.807-.414l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.176 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.27-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.385.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-900 dark:text-slate-100">AWS Services</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">EC2</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Lambda</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">S3</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">RDS</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">DynamoDB</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CloudFormation</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Route 53</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CloudWatch</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">IAM</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">VPC</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 md:row-span-2 order-4 md:order-2">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2 rounded-lg bg-sky-500/10">
+                            <svg class="w-5 h-5 text-sky-500 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-900 dark:text-slate-100">Certifications</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+                            <p class="text-sm font-medium mb-1 text-slate-900 dark:text-slate-100">Microsoft Azure Administrator (AZ-104)</p>
+                            <p class="text-xs text-slate-500">Associate</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+                            <p class="text-sm font-medium mb-1 text-slate-900 dark:text-slate-100">AWS Cloud Practitioner (CLF-C02)</p>
+                            <p class="text-xs text-slate-500">Fundamentals</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+                            <p class="text-sm font-medium mb-1 text-slate-900 dark:text-slate-100">Microsoft Azure Fundamentals (AZ-900)</p>
+                            <p class="text-xs text-slate-500">Fundamentals</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+                            <p class="text-sm font-medium mb-1 text-slate-900 dark:text-slate-100">Microsoft Azure AI Fundamentals (AI-900)</p>
+                            <p class="text-xs text-slate-500">Fundamentals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure Services -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 md:col-span-2 order-2 md:order-3">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2 rounded-lg bg-blue-500/10">
+                            <svg class="w-5 h-5 text-blue-500 dark:text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M5.483 21.3H24L14.025 4.013l-3.038 8.347 5.836 6.938L5.483 21.3zM13.23 2.7L6.105 8.677 0 19.253h5.505v.014L13.23 2.7z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-900 dark:text-slate-100">Azure Services</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Virtual Machines</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Storage</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CosmosDB</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">VNets</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Entra ID</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Azure Monitor</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Front Door</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">App Service</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Static Websites</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">ARM</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Bicep</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Functions</span>
+                    </div>
+                </div>
+
+                <!-- DevOps Tools -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 md:col-span-2 order-3">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2 rounded-lg bg-emerald-500/10">
+                            <svg class="w-5 h-5 text-emerald-500 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-900 dark:text-slate-100">DevOps & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Linux (Ubuntu)</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Git</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Github Actions</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Terraform</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Virtual-Box</span>
+                        <span class="px-3 py-1.5 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">VM-Ware</span>    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 mt-16 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">
+                        Built with HTML, CSS, Tailwind CSS & JS. Hosted on Azure Static Websites.
+                    </p>
+                    <p class="text-slate-400 dark:text-slate-500 text-sm">
+                        &copy; <span id="year"></span> Wisdom Emmanuel. All rights reserved.
+                    </p>
+                </div>
+                
+                <!-- Visitor Counter Placeholder -->
+                <div class="flex items-center gap-3 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <svg class="w-4 h-4 text-slate-400 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    <span class="text-sm text-slate-500 dark:text-slate-400">Visitors: </span>
+                    <span id="visitor-count" class="text-sm font-medium text-slate-700 dark:text-slate-300">---</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript for Nav hamburger menu Toggle & Theme Toggle -->
+    <script src="main.js" defer></script>
+
+    <!-- External JavaScript for Visitor Counter -->
+    <script src="counter.js" defer></script>
+
+</body>
+</html>
