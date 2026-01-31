@@ -7,7 +7,7 @@ A full-stack, serverless resume website built as part of the Cloud Resume Challe
 Live Demo Link: https://wisdomresume.site
 
 
-![Architectural diagram showing user flow from internet through Cloudflare CDN to Azure services including Storage, Functions, and Cosmos DB.]("./images/architecture_diagram.png")
+![Architectural diagram showing user flow from internet through Cloudflare CDN to Azure services including Storage, Functions, and Cosmos DB.](images/architecture_diagram.png)
 *Figure 1.1: The end-to-end serverless architecture for wisdomresume.site.*
 
 
