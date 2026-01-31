@@ -35,31 +35,24 @@ Azure Function updates/retrieves data from Cosmos DB
 
 ## Key Implementation Details
 
-#### 1. Cost-Optimized Edge Architecture
+### 1. Strategic Architecture Choice: Cloudflare vs. Azure Front Door
 
-A core requirement of the Azure Cloud Resume Challenge is serving the site via a CDN with HTTPS. While the standard path suggests Azure Front Door, I identified a significant cost barrier (~$35/month).
+<b>Challenge:</b> While implementing the <b>HTTPS</b> and <b>CDN</b> requirements, I encountered a shift in the Azure ecosystem: Azure CDN (Classic) is being retired, and new resources must now use Azure Front Door Standard. Unlike the consumption-based pricing of the original CDN, Front Door requires a minimum monthly base fee of around $35, which is inefficient for a personal portfolio project.
 
-<b>Engineering Choice:</b> Integrated Cloudflare as a third-party CDN provider.
+<b>Solution:</b> Integrated Cloudflare as a free-tier CDN alternative. This required manual DNS record management and "Indirect CNAME Validation" via asverify records to bypass Azure's default verification logic.
 
-<b>Result:</b> Achieved identical performance and security requirements (Global CDN, SSL, Custom Domain) at $0 monthly operational cost, demonstrating a focus on cost-effective cloud resource management.
+<b>Result:</b> Achieved identical performance and security requirements (Global CDN, SSL, Custom Domain) at $0 monthly operational cost.
 
-#### 2. DNS & SSL Handshake Logic
+### 2. DNS & SSL Handshake Logic
 Integrating Azure Storage with Cloudflare required manual handshake configurations that bypass standard automated workflows:
 
 <b>Indirect Verification:</b> Implemented <b>asverify</b> CNAME records (unproxied) to satisfy Azure’s domain ownership checks while keeping the live traffic records proxied behind Cloudflare’s WAF.
 
 <b>SSL Full (Strict):</b> Configured Cloudflare to enforce a secure tunnel to the Azure origin. This ensures end-to-end encryption by validating Azure’s certificate before serving traffic to wisdomresume.site.
 
-#### 3. Edge-Level Redirection
+### 3. Edge-Level Redirection
 
 To ensure SEO consolidation and a consistent user experience, I implemented Cloudflare Page Rules to handle 301 Permanent Redirects from the root domain (wisdomresume.site) to the www subdomain. This offloads the redirect logic from the application layer to the network edge, reducing latency.
-
-  
-## Detailed Technical Write-up
-
-Building this project involved navigating specific challenges with Azure-to-Cloudflare integration and SSL handshakes. I have documented the entire journey—including the "Why" behind my architectural decisions—in a comprehensive blog post.
-
-Read the full implementation story on Medium <b> (coming soon..)</b>
 
 
 ## Project Progress Log
@@ -85,3 +78,10 @@ Read the full implementation story on Medium <b> (coming soon..)</b>
 - Author Terraform scripts to make the infrastructure reproducible.
 - Build GitHub Actions pipeline for automated frontend / API deployment.
 - Implement Cloudflare Cache Purge logic within the CI/CD workflow.
+
+
+## Detailed Technical Write-up
+
+Building this project involved navigating specific challenges with Azure-to-Cloudflare integration and SSL handshakes. I have documented the entire journey—including the "Why" behind my architectural decisions—in a comprehensive blog post.
+
+Read the full implementation story on Medium <b> (coming soon..)</b>
