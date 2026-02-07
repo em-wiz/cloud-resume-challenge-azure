@@ -67,13 +67,13 @@ To ensure SEO consolidation and a consistent user experience, I implemented Clou
 - Resolved SSL/TLS handshake for custom domain via Cloudflare Proxy.
 - Implemented Root-to-WWW redirection at the Edge.
 
-#### Phase 2: Database & Serverless API (Current)
+#### Phase 2: Database & Serverless API (Completed)
 
 - Provision Azure Cosmos DB (Table API) for visitor tracking.
 - Develop Azure Function in Python to handle DB increments.
 - Implement Frontend JavaScript code to fetch and display the live visitor count.
 
-#### Phase 3: Automation (CI/CD) & IaC
+#### Phase 3: Automation (CI/CD) & IaC (Current)
 
 - Author Terraform scripts to make the infrastructure reproducible.
 - Build GitHub Actions pipeline for automated frontend / API deployment.
