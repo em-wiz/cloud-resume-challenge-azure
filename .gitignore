@@ -214,3 +214,9 @@ __marimo__/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
