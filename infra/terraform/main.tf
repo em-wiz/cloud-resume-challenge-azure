@@ -16,7 +16,7 @@ data "azurerm_resource_group" "crc" {
   name = "rg-cloud-resume-azure"
 }
 
-# Manages existing Cosmos DB with it's current settings
+# Manages existing Cosmos DB with it's current configs
 resource "azurerm_cosmosdb_account" "crc" {
   name                = "db-cloudresume-dev-weu"
   resource_group_name = "rg-cloud-resume-azure"
@@ -45,4 +45,27 @@ resource "azurerm_cosmosdb_account" "crc" {
     failover_priority = 0
   }
 
+}
+
+# Manages existing Function App - App service plan with it's current configs
+resource "azurerm_app_service_plan" "crc" {
+  name                = "ASP-rgcloudresumeazure-9e34"
+  location            = "westeurope"
+  resource_group_name = "rg-cloud-resume-azure"
+
+  kind = "functionapp"
+
+  reserved = true          # indicates Linux
+  sku {
+    tier     = "FlexConsumption"
+    size     = "FC1"
+    capacity = 0
+  }
+
+  tags = {
+    Environment = "Dev"
+    Owner       = "Wisdom Emmanuel"
+    Platform    = "Azure"
+    Project     = "CloudResumeChallenge"
+  }
 }
