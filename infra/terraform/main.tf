@@ -26,6 +26,16 @@ resource "azurerm_cosmosdb_account" "crc" {
   free_tier_enabled   = true
   automatic_failover_enabled = true
 
+  tags = {
+    Environment          = "Dev"
+    Owner                = "Wisdom Emmanuel"
+    Platform             = "Azure"
+    Project              = "CloudResumeChallenge"
+    defaultExperience    = "Core (SQL)"
+    "hidden-cosmos-mmspecial" = ""
+    "hidden-workload-type"    = "Development/Testing"
+  }
+
   consistency_policy {
     consistency_level = "Session"
   }
