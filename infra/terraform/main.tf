@@ -11,7 +11,6 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "crc" {
-  name     = "rg-cloud-resume-terraform"
-  location = "westeurope"
+data "azurerm_resource_group" "crc" {
+  name = "rg-cloud-resume-azure"
 }
