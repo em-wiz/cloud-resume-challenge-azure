@@ -69,3 +69,29 @@ resource "azurerm_app_service_plan" "crc" {
     Project     = "CloudResumeChallenge"
   }
 }
+
+# Manages existing Function App - Storage account with it's current configs
+resource "azurerm_storage_account" "crc" {
+  name                     = "rgcloudresumeazureb08a"
+  resource_group_name      = "rg-cloud-resume-azure"
+  location                 = "westeurope"
+
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+  account_kind             = "StorageV2"
+
+  https_traffic_only_enabled       = true
+  cross_tenant_replication_enabled = false
+
+  network_rules {
+    bypass         = ["AzureServices"]
+    default_action = "Allow"
+  }
+
+  tags = {
+    Environment = "Dev"
+    Owner       = "Wisdom Emmanuel"
+    Platform    = "Azure"
+    Project     = "CloudResumeChallenge"
+  }
+}
