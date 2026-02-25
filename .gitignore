@@ -215,8 +215,22 @@ __marimo__/
 Thumbs.db
 .vscode/
 
-# Terraform
+# --- Terraform Logic ---
+# Ignore the local provider/plugin directory
 .terraform/
+
+# Ignore all state files (these contain secrets!)
 *.tfstate
 *.tfstate.*
+
+# Ignore all plan files (temporary artifacts)
+*.tfplan
+*.tfplan.json
+
+# Ignore variable files that might contain secrets
+*.tfvars
+*.tfvars.json
+
+# Ignore crash logs and general logs
 crash.log
+*.log
