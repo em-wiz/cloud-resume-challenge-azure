@@ -1,0 +1,52 @@
+name: API Deployment
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'api/**'
+      - 'infra/terraform/**'
+      - '.github/workflows/api-deploy.yml'
+
+jobs:
+  terraform-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Log into Azure with the Service Principal credentials
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # 3. Setup Terraform version 1.14.5 to match your local CLI
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.14.5"
+
+      # 4. Terraform Init - pointing to the deep sub-folder
+      - name: Terraform Init
+        working-directory: ./infra/terraform
+        run: terraform init
+
+      # 5. Terraform Apply - creates/updates infra automatically
+      - name: Terraform Apply
+        working-directory: ./infra/terraform
+        run: terraform apply -auto-approve
+
+      # 6. Setup Python 3.10 to match your development environment
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 7. Deploy the code from the 'api' folder to the Function App
+      - name: 'Deploy to Azure Functions'
+        uses: Azure/functions-action@v1
+        with:
+          app-name: 'func-cloudresumeapi-dev-weu'
+          package: './api'
