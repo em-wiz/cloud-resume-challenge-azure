@@ -108,7 +108,7 @@ resource "azurerm_service_plan" "crc" {
 
 resource "azurerm_storage_container" "app_package" {
   name                  = "app-package-func-cloudresumeapi-dev-weu-cf3ef6b"
-  storage_account_name  = azurerm_storage_account.crc.name
+  storage_account_id  = azurerm_storage_account.crc.id
   container_access_type = "private"
 }
 
