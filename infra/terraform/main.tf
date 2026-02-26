@@ -11,6 +11,7 @@ terraform {
     storage_account_name = "stdevopscoredevweu01"
     container_name       = "tfstate"
     key                  = "cloud-resume.tfstate"
+    use_azuread_auth     = true
   }
 }
 
